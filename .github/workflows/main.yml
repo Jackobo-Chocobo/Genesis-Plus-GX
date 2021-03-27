@@ -16,8 +16,8 @@ jobs:
           sudo apt-get install libogg-dev libvorbis-dev libsdl2-dev libxxf86vm-dev libx11-xcb-dev
       - name: Build RetroArch Core
         run: |
-          make clean
-          make
+          make -f Makefile.libretro clean
+          make -f Makefile.libretro
       - name: Upload
         uses: actions/upload-artifact@v1.0.0  
         with:
