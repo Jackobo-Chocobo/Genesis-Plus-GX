@@ -2061,9 +2061,11 @@ void cdd_process(void)
       if (!cdd.latency)
       {
         /* Fixes a few games hanging because they expect data to be read with some delay */
-        /* Wolf Team games (Annet Futatabi, Aisle Lord, Cobra Command, Earnest Evans, Road Avenger & Time Gal) need at least 11 interrupts delay  */
-        /* Space Adventure Cobra (2nd morgue scene) needs at least 13 interrupts delay (incl. seek time, so 11 is OK) */
-        cdd.latency = 11;
+        /* Radical Rex needs at least one interrupt delay */
+        /* Wolf Team games (Anet Futatabi, Aisle Lord, Cobra Command, Earnest Evans, Road Avenger & Time Gal) need at least 11 interrupts delay  */
+        /* Space Adventure Cobra (2nd morgue scene) needs at least 13 interrupts delay (incl. seek time) */
+        /* Sol-Feace needs at least 25 interrupts delay */
+        cdd.latency = 30;
       }
 
       /* CD drive seek time */
